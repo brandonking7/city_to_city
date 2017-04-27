@@ -24,7 +24,7 @@
 
 <!--       <a id="logo-container" href="#" class="brand-logo" style="color: black;"><%= image_tag("logo.png", :size => "125x60") %></a>
  -->
-      <div class="brand-logo"><%= link_to image_tag("logo.png", :size => "125x60"), root_path %></div>
+      <div class="brand-logo"><%= link_to image_tag("logo.png", :size => "160x75"), root_path %></div>
 
       <ul class="right hide-on-med-and-down">
       	<% if user_signed_in? %>
@@ -60,7 +60,7 @@
           <h5 class="header col s12 light">Travel Stories</h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post your story!</a>
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post an Atlanta story!</a>
         </div>
         <br><br>
 
@@ -80,11 +80,25 @@
 
 
 
-       </div>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Chicago</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Travel Stories</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post a Chicago Story!</a>
+        </div>
+        <br><br>
 
+      </div>
     </div>
+    <div class="parallax"><%= image_tag("chicago.jpg") %></div>
   </div>
 
+    <%= yield %>
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
