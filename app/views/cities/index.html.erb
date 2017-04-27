@@ -1,3 +1,29 @@
+<% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Atlanta</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Travel Stories</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post an Atlanta story!</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><%= image_tag("Atlanta1.jpg") %></div>
+  </div>
+
+  <div>
 <ol>
   <% @cities.each do |city| %>
     <li>
@@ -5,3 +31,47 @@
     </li>
   <% end %>
 </ol>
+
+  </div>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center teal-text text-lighten-2">Chicago</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Travel Stories</h5>
+        </div>
+        <div class="row center">
+          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post a Chicago Story!</a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><%= image_tag("chicago.jpg") %></div>
+  </div>
+  <div>
+<ol>
+  <% @cities.each do |city| %>
+    <li>
+      <%= link_to city.name, city%>
+    </li>
+  <% end %>
+</ol>
+
+  </div>
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">So many cities, so many extrodinary stories!</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><%= image_tag("atlanta.jpg") %></div>
+  </div>
+
+
+
