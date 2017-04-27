@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'static_pages#home'
+  root 'cities#index'
 	get '/profile' => 'users#show'
+
+  resources :cities
 end

@@ -33,7 +33,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Use Materialize-sass
  gem 'materialize-sass'
- 
+ gem 'awesome_print'
  gem 'devise', '4.2.1'
 
 # Use Capistrano for deployment
