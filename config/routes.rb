@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'cities#index'
 	get '/profile' => 'users#show'
 
-  resources :cities
+  resources :cities, :posts
+
 end
