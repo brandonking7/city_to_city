@@ -1,23 +1,26 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 body {
   // display: flex;
   height: 750px;
-  background-image: url('');
 }
-ul {
+
+ol {
   display: flex;
   margin-top: 100px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+
 .city_links {
   display: flex;
   font-size: 2em;
   color: white;
 }
 
-.nav_link {
-  color: black;
+nav a {
+  color: black !important;
 }
