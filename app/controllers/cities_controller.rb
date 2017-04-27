@@ -5,5 +5,6 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
+    @posts = City.find(params[:id]).posts
   end
 end
