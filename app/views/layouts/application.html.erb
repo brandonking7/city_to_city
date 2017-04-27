@@ -6,10 +6,32 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+    <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
 
-  <body style="background-image:url('https://c1.staticflickr.com/8/7424/12440279504_5ce424f40f_b.jpg')">
-    <h2>Hey from Atlanta</h2>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  </head>
+  <nav class="grey lighten-4" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="#" class="brand-logo" style="color: black;">City to City</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#" style="color: black;">Sign Up</a></li>
+        <li><a href="#" style="color: black;">Log In</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <body>
+
     <%= yield %>
+    <%= render 'layouts/footer' %>
+
+    
   </body>
 </html>
