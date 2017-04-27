@@ -16,9 +16,13 @@
     <div class="nav-wrapper container">
       <div class="brand-logo"><%= link_to "City to City", root_path %></div>
       <ul class="right hide-on-med-and-down">
-      	<% if user_signed_in? %>
+        <% if user_signed_in? && @city %>
+        <li><%= link_to "New Post", new_post_path %></li>
+        <li><%= link_to "Profile", profile_path %></li>
+        <li><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
+      	<% elsif user_signed_in? %>
       		<li><%= link_to "Profile", profile_path %></li>
-      		<li><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li> 
+      		<li><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li>
       	<% else %>
         	<li><%= link_to "Sign Up", new_user_registration_path %></li>
         	<li><%= link_to "Log In", new_user_session_path %></li>
