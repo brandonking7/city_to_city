@@ -8,11 +8,12 @@ body {
   // background-image: url('https://c1.staticflickr.com/8/7424/12440279504_5ce424f40f_b.jpg');
 }
 
-ul {
+ol {
   display: flex;
   margin-top: 100px;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .city_links {
