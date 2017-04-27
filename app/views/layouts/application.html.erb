@@ -16,6 +16,9 @@
     <div class="nav-wrapper container">
       <div class="brand-logo"><%= link_to "City to City", root_path %></div>
       <ul class="right hide-on-med-and-down">
+	      <% if @city %>
+	      	<li class="city_name_nav">- <%= @city.name %></li>
+	      <% end -%>
       	<% if user_signed_in? %>
       		<li><%= link_to "Profile", profile_path %></li>
       		<li><%= link_to "Log Out", destroy_user_session_path, method: "delete" %></li> 
