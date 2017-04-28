@@ -86,3 +86,13 @@ input {
 .waves-button-input{
   padding-top: 5px;
 }
+
+ .btn {
+   background-image: none !important;
+   outline: 0;
+   -webkit-box-shadow: none !important;
+   box-shadow: none !important;
+ }
+ .btn-large a {
+   color: white;
+ }
