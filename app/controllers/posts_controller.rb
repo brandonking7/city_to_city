@@ -14,8 +14,19 @@ class PostsController < ApplicationController
     redirect_to city_post_path(city, @post)
   end
 
+  def destroy
+  	@post = Post.find(params[:id])
+  	city = @post.city_id
+  	@post.delete
+  	redirect_to "/cities/#{city}"
+  end
+
   private
   def post_params
-      params.require(:post).permit(:title, :content).merge(user_id: current_user.id, city_id: params[:city_id])
+      params
+      	.require(:post).permit(:title, :content)
+      	.merge(user_id: current_user.id, city_id: params[:city_id])
   end
 end
+
+
