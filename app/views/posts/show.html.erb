@@ -1,3 +1,10 @@
 <h1>By: <%= @post.user.email %></h1>
 <h2><%= @post.title %></h2>
 <h2><%= @post.content %></h2>
+
+
+<% if @post.user == current_user %>
+  <%= form_for @post, url: "/cities/#{@post.city.id}/posts/#{@post.id}", method: "DELETE" do |f| %>
+    <%= f.submit "Delete", data: { confirm: "Are you sure you want to delete #{@post.title}?"} %>
+  <% end -%>
+<% end -%>
