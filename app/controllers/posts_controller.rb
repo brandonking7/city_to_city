@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+		before_action :authenticate_user!
+		
   def new
   	@city = City.find(params[:city_id])
     @post = Post.new
