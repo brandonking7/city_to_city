@@ -4,6 +4,7 @@
 
 
 <% if @post.user == current_user %>
+	<%= link_to 'Edit', edit_city_post_path(@post.city.id, @post) %>
   <%= form_for @post, url: "/cities/#{@post.city.id}/posts/#{@post.id}", method: "DELETE" do |f| %>
     <%= f.submit "Delete", data: { confirm: "Are you sure you want to delete #{@post.title}?"} %>
   <% end -%>
