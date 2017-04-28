@@ -1,6 +1,7 @@
 <h2><%= @city.name %></h2>
 <h4><%= image_tag @city.photo_url %></h4>
 
+<%= will_paginate @posts %>
 <ol>
 	<% @posts.each do |post| %>
 		<li>
@@ -10,3 +11,4 @@
 		</li>
 	<% end -%>
 </ol>
+<%= will_paginate @posts %>

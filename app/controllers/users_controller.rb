@@ -4,6 +4,7 @@ class UsersController < ApplicationController
 	def show
 		@user = current_user
 		@posts = current_user.posts
+		@posts = @posts.paginate(:page => params[:page], :per_page => 10)
 	end
 
 	def edit

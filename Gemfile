@@ -35,6 +35,7 @@ gem 'jbuilder', '~> 2.5'
  gem 'materialize-sass'
  gem 'awesome_print'
  gem 'devise', '4.2.1'
+ gem 'will_paginate'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
