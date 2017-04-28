@@ -1,10 +1,10 @@
 <h1>USERS PAGE</h1>
-<%= @user.first_name %>
-<%= @user.last_name %>
-<%= @user.current_city %>
-<%= @user.email %>
-<%# @user.profile_picture %>
+<button><%= link_to "Edit Profile", edit_user_registration_path %></button>
 
+<h1><%= @user.first_name %></h1>
+<h1><%= @user.last_name %></h1>
+<h1><%= @user.email %></h1>
+<h1><%= @user.email %></h1>
 <ol>
 	<% @posts.each do |post| %>
 		<li>
