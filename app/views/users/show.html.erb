@@ -8,6 +8,8 @@
 	<%= @user.profile_pic %>
 <% end -%>
 
+<button><%= link_to "Edit Profile", edit_user_registration_path %></button>
+
 <ol>
 	<% @posts.each do |post| %>
 		<li>
