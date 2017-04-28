@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+
     <title>CityToCity</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'favicon1.png', sizes: '16x16 32x32' %>
     <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
-
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+ -->
   <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> -->
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   </head>
   <nav class="grey lighten-4" role="navigation">
     <div class="nav-wrapper container">
-      <div class="brand-logo"><%= link_to "City to City", root_path %></div>
+
+<!--       <a id="logo-container" href="#" class="brand-logo" style="color: black;"><%= image_tag("logo.png", :size => "125x60") %></a>
+ -->
+      <div class="brand-logo"><%= link_to image_tag("logo.png", :size => "160x75"), root_path %></div>
+
       <ul class="right hide-on-med-and-down">
       	<% if @city %>
       		<li class="center city_name_nav"><%= @city.name %></li>
@@ -40,16 +52,40 @@
   </nav>
 
   <body>
-		<% if notice %>
-			<p class="alert alert-success"><%= notice %></p>
-		<% end %>
-		<% if alert %>
-			<p class="alert alert-danger"><%= alert %></p>
-		<% end %>
+
+<!-- home.html -->
 
     <%= yield %>
 
-    <%= render 'layouts/footer' %>
+
+
+
+<!-- home.html -->
+
+
+
+
+
+
+
+
+
+  <footer class="page-footer teal">
+    <div class="container">
+
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Brandon | Charles | Jibril </a>GA WDI9 Copyright 2017
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
 
   </body>
 </html>
