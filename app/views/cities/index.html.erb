@@ -14,7 +14,12 @@
           <h5 class="header col s12 light">Travel Stories</h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post an Atlanta story!</a>
+<div class="btn-large waves-effect waves-light teal lighten-1">
+  Views <% @cities.each do |city| %>
+      <%= link_to city.name, city %> Posts
+
+  <% end %>
+</div>
         </div>
         <br><br>
 
@@ -25,11 +30,8 @@
 
   <div>
 <ol>
-  <% @cities.each do |city| %>
-    <li>
-      <%= link_to city.name, city%>
-    </li>
-  <% end %>
+
+
 </ol>
 
   </div>
@@ -43,7 +45,13 @@
           <h5 class="header col s12 light">Travel Stories</h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post a Chicago Story!</a>
+        <div class="btn-large waves-effect waves-light teal lighten-1">
+  View <% @cities.each do |city| %>
+      <%= link_to city.name, city %> Posts
+
+  <% end %>
+    </div>
+
         </div>
         <br><br>
 
@@ -53,11 +61,7 @@
   </div>
   <div>
 <ol>
-  <% @cities.each do |city| %>
-    <li>
-      <%= link_to city.name, city%>
-    </li>
-  <% end %>
+
 </ol>
 
   </div>
