@@ -5,7 +5,7 @@
 <ol>
 	<% @posts.each do |post| %>
 		<li>
-			<%= link_to "#{post.title}", city_posts_path(@city, post) %>
+			<%= link_to "#{post.title}", city_post_path(@city, post) %>
 			<br />
 			<%= post.content %>
 		</li>
