@@ -4,7 +4,7 @@
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
-
+<% @cities.each do |city| %>
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
@@ -15,10 +15,10 @@
         </div>
         <div class="row center">
 <div class="btn-large waves-effect waves-light teal lighten-1">
-  Views <% @cities.each do |city| %>
+  Views
       <%= link_to city.name, city %> Posts
 
-  <% end %>
+
 </div>
         </div>
         <br><br>
@@ -46,7 +46,7 @@
         </div>
         <div class="row center">
         <div class="btn-large waves-effect waves-light teal lighten-1">
-  View <% @cities.each do |city| %>
+  View
       <%= link_to city.name, city %> Posts
 
   <% end %>
