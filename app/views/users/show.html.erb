@@ -4,9 +4,7 @@
 <%= @user.current_city %>
 <%= @user.created_at || date %>
 
-<% if @user.profile_pic? %>
-	<%= image_tag("#{@user.profile_pic}") %>
-<% end -%>
+<%= image_tag("#{@user.profile_pic}") %>
 
 <button><%= link_to "Edit Profile", edit_user_registration_path %></button>
 
