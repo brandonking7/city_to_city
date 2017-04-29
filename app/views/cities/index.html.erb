@@ -1,10 +1,11 @@
-<% if notice %>
+    <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
     <% end %>
     <% if alert %>
       <p class="alert alert-danger"><%= alert %></p>
     <% end %>
 
+    <% @cities.each do |city| %>
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
@@ -14,7 +15,9 @@
           <h5 class="header col s12 light">Travel Stories</h5>
         </div>
         <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post an Atlanta story!</a>
+          <!-- <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post an Atlanta story!</a> -->
+          <button id="download-button" class="btn-large waves-effect waves-light teal lighten-1"><%= link_to city.name, city%></button>
+
         </div>
         <br><br>
 
@@ -22,45 +25,14 @@
     </div>
     <div class="parallax"><%= image_tag("Atlanta1.jpg") %></div>
   </div>
-
-  <div>
+<div>
 <ol>
-  <% @cities.each do |city| %>
-    <li>
-      <%= link_to city.name, city%>
-    </li>
-  <% end %>
+
+
 </ol>
 
   </div>
-
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h1 class="header center teal-text text-lighten-2">Chicago</h1>
-        <div class="row center">
-          <h5 class="header col s12 light">Travel Stories</h5>
-        </div>
-        <div class="row center">
-          <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Post a Chicago Story!</a>
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><%= image_tag("chicago.jpg") %></div>
-  </div>
-  <div>
-<ol>
-  <% @cities.each do |city| %>
-    <li>
-      <%= link_to city.name, city%>
-    </li>
-  <% end %>
-</ol>
-
-  </div>
+<% end %>
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
@@ -72,6 +44,3 @@
     </div>
     <div class="parallax"><%= image_tag("atlanta.jpg") %></div>
   </div>
-
-
-
