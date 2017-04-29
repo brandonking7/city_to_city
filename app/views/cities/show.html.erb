@@ -4,6 +4,7 @@
 <%= will_paginate @posts %>
 <ol>
 	<% @posts.each do |post| %>
+			<%= image_tag("#{post.user.profile_pic}") %>
 		<li>
 			<%= link_to "#{post.title}", city_post_path(@city, post) %>
 			<br />

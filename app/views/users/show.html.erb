@@ -2,10 +2,10 @@
 <%= @user.first_name %>
 <%= @user.last_name %>
 <%= @user.current_city %>
-<%= @user.email %>
+<%= @user.created_at || date %>
 
 <% if @user.profile_pic? %>
-	<%= @user.profile_pic %>
+	<%= image_tag("#{@user.profile_pic}") %>
 <% end -%>
 
 <button><%= link_to "Edit Profile", edit_user_registration_path %></button>
@@ -14,7 +14,7 @@
 <ol>
 	<% @posts.each do |post| %>
 		<li>
-			<%= post.title %>
+			<%= link_to "#{post.title}", city_post_path(post.city.id, post) %>
 			<br />
 			<%= post.content %>
 		</li>
