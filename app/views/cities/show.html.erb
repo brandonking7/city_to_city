@@ -1,14 +1,86 @@
-<h2><%= @city.name %></h2>
-<h4><%= image_tag @city.photo_url %></h4>
+<div class="wrapper">
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 col-ms-12">
+          <h3><%= @city.name %></h3>
 
+
+        <!--   <%= will_paginate @posts %>
+          <ol>
+          	<% @posts.each do |post| %>
+          		<li>
+          			<%= link_to "#{post.title}", city_post_path(@city, post) %>
+          			<br />
+          			<%= post.content %>
+          		</li>
+          	<% end -%>
+          </ol>
+          <%= will_paginate @posts %> -->
+      </div>
+    </div>
+</div>
+
+<div>
+<main>
+
+        <!--Main layout-->
+        <div class="container">
+            <div class="row">
+
+                <!--Sidebar-->
+                <div class="col-lg-2 wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+
+                </div>
+                <!--/.Sidebar-->
+
+                <!--Main column-->
+                <div class="col-lg-8">
+
+                    <!--First row-->
+                    <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                        <div class="col-md-12">
+                            <!--Product-->
+                            <div class="product-wrapper">
+
+                                <!--Featured image-->
+                                <div class="view overlay hm-white-light z-depth-1-half">
+                                    <%= image_tag @city.photo_url, :class => "img-fluid" %>
+                                    <div class="mask">
+                                    </div>
+                                </div>
+                                <!--/.Featured image-->
+                                <br>
 <%= will_paginate @posts %>
-<ol>
-	<% @posts.each do |post| %>
-		<li>
-			<%= link_to "#{post.title}", city_post_path(@city, post) %>
-			<br />
-			<%= post.content %>
-		</li>
-	<% end -%>
-</ol>
-<%= will_paginate @posts %>
+    <% @posts.each do |post| %>
+    <div>
+                                <!--Product data-->
+                                <h3 class="h3-responsive"><%= link_to "#{post.title}", city_post_path(@city, post) %></h3>
+                                <hr>
+                                <p> <%= post.content %></p>
+
+                                <ul class="rating inline-ul">
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul></div>
+ <% end -%>
+
+          <%= will_paginate @posts %>
+                            </div>
+                            <!--Product-->
+
+                        </div>
+                    </div>
+                    <!--/.First row-->
+
+                </div>
+                <!--/.Main column-->
+
+            </div>
+        </div>
+        <!--/.Main layout-->
+
+    </main>
+</div>

@@ -96,3 +96,9 @@ input {
  .btn-large a {
    color: white;
  }
+
+/*Cities Image*/
+.col-md-12 img {
+    width: 100%;
+
+}
