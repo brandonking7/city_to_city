@@ -181,3 +181,7 @@ a {
     font-size: 1.4rem;
     padding: 0.1rem 2.13rem !important;
 }
+
+.pagination > * {
+	padding: 0 4px 0 4px;
+}
