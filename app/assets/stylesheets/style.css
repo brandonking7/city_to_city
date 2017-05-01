@@ -158,3 +158,21 @@ a {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
+
+.view-profile {
+    overflow: hidden;
+    position: relative;
+    cursor: default;
+    margin-top: 5%;
+}
+
+.btn a {
+    color: #fff;
+}
+
+
+
+.hr-line {
+  border-left: rgba(0, 0, 0, 0.05) 1px solid;
+  margin-top: 9%;
+}
