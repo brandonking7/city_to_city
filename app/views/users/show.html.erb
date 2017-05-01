@@ -13,7 +13,7 @@
                         <b>Name:</b> <%= @user.first_name %>
                         <%= @user.last_name %> <br />
                         <b>Current City:</b> <%= @user.current_city %> <br />
-                        <b>Created At:</b> <%= @user.created_at || date %> <br />
+                        <b>Created At:</b> <%= @user.created_at.strftime ("%b. %Y") %> <br />
 
 
                        <div class="view-profile overlay hm-white-light z-depth-1-half">
