@@ -176,3 +176,8 @@ a {
   border-left: rgba(0, 0, 0, 0.05) 1px solid;
   margin-top: 9%;
 }
+
+.back {
+    font-size: 1.4rem;
+    padding: 0.1rem 2.13rem !important;
+}
