@@ -59,6 +59,8 @@
                           </a>
                           <div class="media-body">
                               <h4 class="media-heading"><%= link_to "#{post.title}", city_post_path(@city, post) %></h4>
+                              <post><b>Posted at:</b> <%= post.created_at.strftime ("%B %d at %I:%M %p") %></post>
+
                               <ul class="rating inline-ul">
                                   <li><i class="fa fa-star amber-text"></i></li>
                                   <li><i class="fa fa-star amber-text"></i></li>
