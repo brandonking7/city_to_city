@@ -1,86 +1,86 @@
-  <div class="container city-show">
-    <main>
-        <!--Main layout-->
-            <div class="row">
-               <!--Main column-->
-                <div class="col-lg-12">
-                  <h2 class="h2-responsive"><%= @city.name %></h2>
-                    <!--First row-->
-                    <div class="row wow fadeIn" data-wow-delay="0.4s">
-                        <div class="col-md-12">
-                            <!--Product-->
-                            <div class="product-wrapper">
+<div class="container city-show">
+  <main>
+      <!--Main layout-->
+          <div class="row">
+             <!--Main column-->
+              <div class="col-lg-12">
+                <h2 class="h2-responsive"><%= @city.name %></h2>
+                  <!--First row-->
+                  <div class="row wow fadeIn" data-wow-delay="0.4s">
+                      <div class="col-md-12">
+                          <!--Product-->
+                          <div class="product-wrapper">
 
-                                <!--Featured image-->
-                                <div class="view overlay hm-white-light z-depth-1-half">
-                                    <%= image_tag @city.photo_url, :class => "img-fluid" %>
-                                    <div class="mask">
-                                    </div>
-                                </div>
-                                <!--/.Featured image-->
+                              <!--Featured image-->
+                              <div class="view overlay hm-white-light z-depth-1-half">
+                                  <%= image_tag @city.photo_url, :class => "img-fluid" %>
+                                  <div class="mask">
+                                  </div>
+                              </div>
+                              <!--/.Featured image-->
 
-                                <br>
+                              <br>
 
-                                <!--Product data-->
+                              <!--Product data-->
 
-                                <hr>
-                                <p><%= @city.description %></p>
+                              <hr>
+                              <p><%= @city.description %></p>
 
-                                <ul class="rating inline-ul">
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
+                              <ul class="rating inline-ul">
+                                  <li><i class="fa fa-star amber-text"></i></li>
+                                  <li><i class="fa fa-star amber-text"></i></li>
+                                  <li><i class="fa fa-star amber-text"></i></li>
+                                  <li><i class="fa fa-star amber-text"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                              </ul>
 
-                            </div>
-                            <!--Product-->
+                          </div>
+                          <!--Product-->
 
-                        </div>
-                    </div>
-                    <!--/.First row-->
+                      </div>
+                  </div>
+                  <!--/.First row-->
 
-                    <!--Second row-->
-                    <div class="row1">
+                  <!--Second row-->
+                  <div class="row1">
 
-                        <!--Heading-->
-                            <div class="reviews wow fadeIn" data-wow-delay="0.4s">
-                                <h2 class="h2-responsive">Posts</h2>
-                            </div>
-                    <%= will_paginate @posts %>
-                    <% @posts.each do |post| %>
-                        <!--First review-->
-                        <div class="reviews media wow fadeIn" data-wow-delay="0.2s">
-                            <a class="media-left" href="#">
-															<div class="rounded-circle">
-																<%= image_tag("#{post.user.profile_pic}") %>
-															</div>
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading"><%= link_to "#{post.title}", city_post_path(@city, post) %></h4>
-                                <ul class="rating inline-ul">
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star amber-text"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                    <li><i class="fa fa-star"></i></li>
-                                </ul>
-                                                                <hr>
-                                <div class="post-content">
-                                <p> <%= post.content %></p>
-                                </div>
-                            </div>
-                        </div>
-                        <% end -%>
+                      <!--Heading-->
+                          <div class="reviews wow fadeIn" data-wow-delay="0.4s">
+                              <h2 class="h2-responsive">Posts</h2>
+                          </div>
+                  <%= will_paginate @posts %>
+                  <% @posts.each do |post| %>
+                      <!--First review-->
+                      <div class="reviews media wow fadeIn" data-wow-delay="0.2s">
+                          <a class="media-left" href="#">
+														<div class="rounded-circle">
+															<%= image_tag("#{post.user.profile_pic}") %>
+														</div>
+                          </a>
+                          <div class="media-body">
+                              <h4 class="media-heading"><%= link_to "#{post.title}", city_post_path(@city, post) %></h4>
+                              <ul class="rating inline-ul">
+                                  <li><i class="fa fa-star amber-text"></i></li>
+                                  <li><i class="fa fa-star amber-text"></i></li>
+                                  <li><i class="fa fa-star amber-text"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                                  <li><i class="fa fa-star"></i></li>
+                              </ul>
+                                                              <hr>
+                              <div class="post-content">
+                              <p> <%= post.content %></p>
+                              </div>
+                          </div>
+                      </div>
+                      <% end -%>
 
-                <%= will_paginate @posts %>
-                    </div>
-                    <!--/.Second row-->
-                </div>
-                <!--/.Main column-->
-            </div>
+              <%= will_paginate @posts %>
+                  </div>
+                  <!--/.Second row-->
+              </div>
+              <!--/.Main column-->
+          </div>
 
-        <!--/.Main layout-->
-    </main>
-       </div>
+      <!--/.Main layout-->
+  </main>
+     </div>
