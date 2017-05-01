@@ -1,14 +1,92 @@
-<div class="container">
-<h3>By: <%= @post.user.first_name %> <%= @post.user.last_name %></h3>
-<%= image_tag("#{@post.user.profile_pic}") %>
-<h4><%= @post.title %></h4>
-<h4><%= @post.content %></h4>
 
+<div class="container city-show">
+                    <!--First row-->
+                    <div class="row wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                        <div class="col-md-12">
+                            <!--Product-->
+                            <div class="product-wrapper">
+                                <!--Featured image-->
+                                <div class="view overlay hm-white-light z-depth-1-half">
+                                    <%= image_tag @post.city.photo_url, :class => "img-fluid" %>
+                                    <div class="mask">
+                                    </div>
 
-<% if @post.user == current_user %>
-	<%= link_to 'Edit', edit_city_post_path(@post.city.id, @post) %>
-  <%= form_for @post, url: "/cities/#{@post.city.id}/posts/#{@post.id}", method: "DELETE" do |f| %>
-    <%= f.submit "Delete", data: { confirm: "Are you sure you want to delete #{@post.title}?"} %>
-  <% end -%>
-<% end -%>
-</div>
+                                    <!-- <h3 class="price"><span class="badge red darken-2">10 $</span></h3> -->
+                                </div>
+                                <!--/.Featured image-->
+                                <br>
+                                <!--Product data-->
+                                <h2 class="h2-responsive" style="display: flex;">
+																	<div style="width: 50%;">
+																		<%= @post.title %>
+																	</div>
+																<% if @post.user == current_user %>
+																<div style="width: 50%;">
+
+																	<%= link_to 'Edit', edit_city_post_path(@post.city.id, @post) %>
+																	<%= form_for @post, url: "/cities/#{@post.city.id}/posts/#{@post.id}", method: "DELETE" do |f| %>
+																	<%= f.submit "Delete", data: { confirm: "Are you sure you want to delete #{@post.title}?"} %>
+																	<% end -%>
+																	<% end -%>
+																</div>
+
+																</h2>
+                                <hr>
+                                <p><%= @post.content %></p>
+                                <ul class="rating inline-ul">
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                            </div>
+                            <!--Product-->
+                        </div>
+                    </div>
+                    <!--/.First row-->
+                    <!--Second row-->
+                    <div class="row">
+
+                        <!--Heading-->
+                            <div class="col reviews wow fadeIn" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeIn;">
+                                <h2 class="h2-responsive">Posted By</h2>
+																<hr>
+                            <!-- </div> -->
+
+														<br>
+                        <!--First review-->
+                        <div class="media wow fadeIn" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeIn;">
+														<br>
+														<a class="media-left rounded-circle" href="#">
+                                <%= image_tag("#{@post.user.profile_pic}") %>
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><%= @post.user.first_name %> <%= @post.user.last_name %></h4>
+																<hr>
+																<ul class="rating inline-ul">
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+																<div >
+																	<label for="">Joined:</label>
+																	<p><%= @post.user.created_at || date %></p>
+																	<hr>
+																</div>
+																<div>
+																	<label for="">Current City:</label>
+																	<p><%= @post.user.current_city %></p>
+																	<hr>
+																</div>
+
+                                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate temporibus iure soluta. Quasi mollitia maxime nemo quam accusamus possimus, voluptatum expedita assumenda. Earum sit id ullam eum vel delectus!</p> -->
+                            </div>
+                        </div>
+												</div>
+
+                    </div>
+                    <!--/.Second row-->
+                </div>
