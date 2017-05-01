@@ -17,11 +17,11 @@
                                 <br>
                                 <!--Product data-->
                                 <h2 class="h2-responsive" style="display: flex;">
-																	<div style="width: 50%;">
+																	<div style="width: 100%;">
 																		<%= @post.title %>
 																	</div>
 																<% if @post.user == current_user %>
-																<div style="width: 50%;">
+																<div style="width: 100%;">
 																	<div style="display: flex; float: right;">
 																		<%= link_to 'Edit', edit_city_post_path(@post.city.id, @post), :class => "waves-effect waves-light btn" %>
 																		<%= form_for @post, url: "/cities/#{@post.city.id}/posts/#{@post.id}" , method: "DELETE" do |f| %>
