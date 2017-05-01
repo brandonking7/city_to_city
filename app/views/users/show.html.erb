@@ -1,24 +1,101 @@
-<h3>Profile Page</h3>
-<%= @user.first_name %>
-<%= @user.last_name %>
-<%= @user.current_city %>
-<%= @user.created_at || date %>
+<main>
 
-<% if @user.profile_pic? %>
-	<%= image_tag("#{@user.profile_pic}") %>
-<% end -%>
+        <!--Main layout-->
+        <div class="container">
+            <div class="row row-profile">
 
-<button><%= link_to "Edit Profile", edit_user_registration_path %></button>
+
+                <!--Sidebar-->
+                <div class="col-lg-4 wow fadeIn animated" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s;">
+                    <h2 class="h2-responsive">Profile Page</h2>
+
+                    <div class="widget-wrapper">
+                        <%= @user.first_name %>
+                        <%= @user.last_name %>
+                        <%= @user.current_city %>
+                        <%= @user.created_at || date %>
+
+
+                       <div class="view-profile overlay hm-white-light z-depth-1-half">
+                       <% if @user.profile_pic? %>
+                                <%= image_tag("#{@user.profile_pic}") %>
+                              <% end -%>                                    <div class="mask">
+                                    </div>
+
+                                </div>
+                                </div>
+
+                  <div>
+                  <br>
+                    <button class="waves-effect waves-light btn">
+                    <%= link_to "Edit Profile", edit_user_registration_path %>
+
+                    </button>
+                </div>
+
+                </div>
+                <!--/.Sidebar-->
+
+                <!--Main column-->
+                <div class="col-lg-8 hr-line">
+
+                    <!--First row-->
+                    <div class="row wow fadeIn animated" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s;">
+                        <div class="col-md-12">
+                            <!--Product-->
+                            <div class="product-wrapper">
+
+                                <!--Product data-->
+                                <h3 class="h4-responsive">Posts</h3>
+                                <hr>
+
+                                <div class="media-body">
+                                <%= will_paginate @posts %>
+                                <% @posts.each do |post| %>
+                        <h5 class=""><%= link_to "#{post.title}", city_post_path(post.city.id, post) %></h5>
+                        <ul class="rating inline-ul">
+<hr>
+      <%= post.content %>  <%= link_to 'Edit', edit_city_post_path(post.city.id, post) %>
+      <br>
+  <br />
+
+      <br>
+  <% end -%>
 
 <%= will_paginate @posts %>
-<ol>
-	<% @posts.each do |post| %>
-		<li>
-			<%= link_to "#{post.title}", city_post_path(post.city.id, post) %>
-			<br />
-			<%= post.content %>
-		</li>
-			<%= link_to 'Edit', edit_city_post_path(post.city.id, post) %>
-	<% end -%>
-</ol>
-<%= will_paginate @posts %>
+                    </div>
+
+                                <ul class="rating inline-ul">
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+
+                            </div>
+                            <!--Product-->
+
+                        </div>
+                    </div>
+                    <!--/.First row-->
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
