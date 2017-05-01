@@ -22,12 +22,15 @@
 																	</div>
 																<% if @post.user == current_user %>
 																<div style="width: 50%;">
+																	<div style="display: flex; float: right;">
+																		<%= link_to 'Edit', edit_city_post_path(@post.city.id, @post), :class => "waves-effect waves-light btn" %>
+																		<%= form_for @post, url: "/cities/#{@post.city.id}/posts/#{@post.id}" , method: "DELETE" do |f| %>
+																		<%= f.submit "Delete", :class => "waves-effect waves-danger btn",data: { confirm: "Are you sure you want to delete #{@post.title}?"} %>
+																		<% end -%>
+																		<% end -%>
 
-																	<%= link_to 'Edit', edit_city_post_path(@post.city.id, @post) %>
-																	<%= form_for @post, url: "/cities/#{@post.city.id}/posts/#{@post.id}", method: "DELETE" do |f| %>
-																	<%= f.submit "Delete", data: { confirm: "Are you sure you want to delete #{@post.title}?"} %>
-																	<% end -%>
-																	<% end -%>
+																	</div>
+
 																</div>
 
 																</h2>
