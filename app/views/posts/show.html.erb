@@ -1,7 +1,8 @@
-<h1>By: <%= @post.user.first_name %> <%= @post.user.last_name %></h1>
+<div class="container">
+<h3>By: <%= @post.user.first_name %> <%= @post.user.last_name %></h3>
 <%= image_tag("#{@post.user.profile_pic}") %>
-<h2><%= @post.title %></h2>
-<h2><%= @post.content %></h2>
+<h4><%= @post.title %></h4>
+<h4><%= @post.content %></h4>
 
 
 <% if @post.user == current_user %>
@@ -10,3 +11,4 @@
     <%= f.submit "Delete", data: { confirm: "Are you sure you want to delete #{@post.title}?"} %>
   <% end -%>
 <% end -%>
+</div>

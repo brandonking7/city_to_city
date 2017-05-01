@@ -96,3 +96,65 @@ input {
  .btn-large a {
    color: white;
  }
+
+.mg-fluid {
+  width: 75%;
+}
+
+.list-group-item.active {
+    background-color: #33b5e5
+    border-color:#33b5e5
+}
+
+.list-group-item:not(.active) {
+    color:#222;
+}
+
+.list-group-item:not(.active):hover {
+    color:#666;
+}/* YOUR CUSTOM STYLES */
+
+.city-show {
+  margin-top: 20px;
+}
+
+.reviews {
+  width: 100%;
+}
+
+.parallax-footer {
+  display: block; transform: translate3d(-50%, 145px, 0px);
+}
+
+.btn {
+    font-size: 0.8rem;
+    padding: 0.2rem 2.13rem !important;
+}
+
+.city_name_nav {
+  color: #00ab9d;
+  padding-right: 20px;
+}
+
+.parallax img {
+    display: none;
+    left: 50%;
+    bottom: -200px;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.bottom-img {
+  top: 150px;
+}
+
+a {
+    color: #00ab9d;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
