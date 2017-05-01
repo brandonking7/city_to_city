@@ -14,7 +14,7 @@
         <div class="row center">
           <h5 class="header col s12 light">Travel Stories</h5>
         </div>
-        <div class="row center">
+        <div class="center">
           <button id="download-button" class="btn-large waves-effect waves-light teal lighten-1">View <%= link_to city.name, city%>'s Stories</button>
         </div>
         <br><br>
@@ -27,13 +27,14 @@
 </div>
 <% end %>
 
-<div class="parallax-container valign-wrapper">
-  <div class="section no-pad-bot">
-    <div class="container">
-      <div class="row center">
-        <h5 class="header col s12 light">So many cities, so many extrodinary stories!</h5>
+<div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light bottom-img">So many cities, so many extrodinary stories!</h5>
+        </div>
       </div>
     </div>
+    <div class="parallax"><%= image_tag("atlanta.jpg") %></div>
   </div>
- <div class="parallax"><%= image_tag("atlanta.jpg") %></div>
-</div>
+

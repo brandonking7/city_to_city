@@ -1,3 +1,5 @@
+<div class="container">
+
 <h2>New Post</h2>
 
 <%= form_for [@city, @post] do |f| %>
@@ -7,5 +9,6 @@
   <%= f.label :content %>
   <%= f.text_field :content, :required => true%>
 
-  <%= f.submit %>
+  <%= f.submit :class => 'waves-effect waves-light btn' %>
 <% end %>
+</div>

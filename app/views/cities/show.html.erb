@@ -1,15 +1,96 @@
-<h2><%= @city.name %></h2>
-<h4><%= image_tag @city.photo_url %></h4>
+  <div class="container city-show">
+    <main>
+        <!--Main layout-->
+            <div class="row">
+               <!--Main column-->
+                <div class="col-lg-12">
+                  <h2 class="h2-responsive"><%= @city.name %></h2>
+                    <!--First row-->
+                    <div class="row wow fadeIn" data-wow-delay="0.4s">
+                        <div class="col-md-12">
+                            <!--Product-->
+                            <div class="product-wrapper">
 
-<%= will_paginate @posts %>
-<ol>
-	<% @posts.each do |post| %>
-			<%= image_tag("#{post.user.profile_pic}") %>
-		<li>
-			<%= link_to "#{post.title}", city_post_path(@city, post) %>
-			<br />
-			<%= post.content %>
-		</li>
-	<% end -%>
-</ol>
-<%= will_paginate @posts %>
+                                <!--Featured image-->
+                                <div class="view overlay hm-white-light z-depth-1-half">
+                                    <%= image_tag @city.photo_url, :class => "img-fluid" %>
+                                    <div class="mask">
+                                    </div>
+                                </div>
+                                <!--/.Featured image-->
+
+                                <br>
+
+                                <!--Product data-->
+
+                                <hr>
+                                <p>Atlanta is the capital of the U.S. state of
+                                Georgia. It played an important part in both
+                                the Civil War and the 1960s Civil Rights Movement.
+                                Atlanta History Center chronicles the city's past,
+                                and the Martin Luther King Jr. National Historic
+                                Site is dedicated to the African-American leader’s
+                                life and times. Downtown, Centennial Olympic Park,
+                                built for the 1996 Olympics, encompasses the massive
+                                Georgia Aquarium.</p>
+
+                                <ul class="rating inline-ul">
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+
+                            </div>
+                            <!--Product-->
+
+                        </div>
+                    </div>
+                    <!--/.First row-->
+
+                    <!--Second row-->
+                    <div class="row1">
+
+                        <!--Heading-->
+                            <div class="reviews wow fadeIn" data-wow-delay="0.4s">
+                                <h2 class="h2-responsive">Posts</h2>
+                            </div>
+                    <%= will_paginate @posts %>
+                    <% @posts.each do |post| %>
+                        <!--First review-->
+                        <div class="reviews media wow fadeIn" data-wow-delay="0.2s">
+                            <a class="media-left" href="#">
+                                <img class="rounded-circle" src="http://mdbootstrap.com/img//Photos/Avatars/avatar-7.jpg" alt="Generic placeholder image">
+                            </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><%= link_to "#{post.title}", city_post_path(@city, post) %></h4>
+                                <ul class="rating inline-ul">
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star amber-text"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                    <li><i class="fa fa-star"></i></li>
+                                </ul>
+                                                                <hr>
+                                <div class="post-content">
+                                <p> <%= post.content %></p>
+                                </div>
+                            </div>
+                        </div>
+                        <% end -%>
+
+                <%= will_paginate @posts %>
+                    </div>
+                    <!--/.Second row-->
+                </div>
+                <!--/.Main column-->
+            </div>
+
+        <!--/.Main layout-->
+    </main>
+       </div>
+
+
+
+
