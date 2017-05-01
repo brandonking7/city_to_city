@@ -6172,8 +6172,10 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   border-top-left-radius: 0.25rem;
 }
 
-.rounded-circle {
+.rounded-circle img {
   border-radius: 50%;
+  width: 85px;
+  height: 85px;
 }
 
 .rounded-0 {

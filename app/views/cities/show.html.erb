@@ -61,7 +61,9 @@
                         <!--First review-->
                         <div class="reviews media wow fadeIn" data-wow-delay="0.2s">
                             <a class="media-left" href="#">
-                                <img class="rounded-circle" src="http://mdbootstrap.com/img//Photos/Avatars/avatar-7.jpg" alt="Generic placeholder image">
+															<div class="rounded-circle">
+																<%= image_tag("#{post.user.profile_pic}") %>
+															</div>
                             </a>
                             <div class="media-body">
                                 <h4 class="media-heading"><%= link_to "#{post.title}", city_post_path(@city, post) %></h4>
@@ -90,7 +92,3 @@
         <!--/.Main layout-->
     </main>
        </div>
-
-
-
-
