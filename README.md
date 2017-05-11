@@ -9,7 +9,7 @@ A simple to use application for users to read and post about popular tourist spo
 [Citi2Citi](https://citi2citi.herokuapp.com/)
 
 ## Trello Board
-[Citi2Citi Trello Flow](https://trello.com/b/IaBCp5Pv/vagabond-city2city
+[Citi2Citi Trello Flow](https://trello.com/b/IaBCp5Pv/vagabond-city2city)
 
 ## Group-Members
 - Brandon King
